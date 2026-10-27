@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кавер-группа ДРАМА — живая музыка на свадьбу и корпоратив в Краснодаре, Сочи, Анапе, Геленджике, Новороссийске и Ростове</title>
+<meta name="description" content="Кавер-группа ДРАМА: живая музыка на свадьбу и корпоратив. Работаем в Краснодаре, Сочи, Анапе, Геленджике, Новороссийске и Ростове. Связь с Татьяной Мон через бота @drama_cover_bot.">
+<meta name="theme-color" content="#0E0F13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FE117C'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='900' font-size='38' fill='%23000' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0E0F13;
+  --ink-2:#15161C;
+  --ink-3:#1C1E26;
+  --line:#2A2C36;
+  --paper:#F6F4F5;
+  --muted:#A2A4AE;
+  --accent:#FE117C;
+  --accent-soft:rgba(254,17,124,.12);
+  --radius:14px;
+  --space:clamp(56px,7vw,104px);
+  --wrap:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--paper);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+}
+img,svg,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+h1,h2,h3,h4{font-weight:700;line-height:1.14;letter-spacing:-.02em;margin:0 0 .5em}
+h1{font-size:clamp(30px,4.6vw,56px)}
+h2{font-size:clamp(24px,3.2vw,38px)}
+h3{font-size:clamp(18px,2.1vw,22px)}
+p{margin:0 0 1em;max-width:64ch}
+ul{margin:0 0 1em;padding-left:1.15em}
+li{margin-bottom:.45em}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
+
+/* ХЕДЕР И ЛОГОТИП */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(14,15,19,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;gap:20px;min-height:72px}
+.logo-box{
+  display:inline-flex;align-items:center;gap:12px;
+  text-decoration:none;font-weight:900;letter-spacing:.05em;
+}
+.logo-icon{
+  width:42px;height:42px;background:#FE117C;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:#000;font-size:22px;font-weight:900;box-shadow:0 0 15px rgba(254,17,124,.4);
+}
+.logo-texts{display:flex;flex-direction:column;line-height:1.1}
+.logo-title{font-size:18px;letter-spacing:.15em;color:#fff;font-weight:900}
+.logo-sub{font-size:11px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
+
+.main-nav{margin-left:auto}
+.main-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px;color:var(--muted)}
+.main-nav a{padding:6px 0;border-bottom:1px solid transparent;cursor:pointer}
+.main-nav a:hover,.main-nav a.active{color:var(--paper);border-bottom-color:var(--accent)}
+
+.header-actions{display:flex;align-items:center;gap:14px}
+.header-phone{font-weight:600;font-size:15px;white-space:nowrap}
+.header-phone:hover{color:var(--accent)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 24px;border-radius:100px;font-weight:600;font-size:15px;
+  border:1px solid transparent;cursor:pointer;transition:.18s ease;text-align:center;
+}
+.btn-primary{background:var(--accent);color:#000}
+.btn-primary:hover{background:#e00c6d}
+.btn-ghost{border-color:var(--line);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-sm{padding:10px 18px;font-size:14px}
+
+/* ВКЛАДКИ КОНТЕНТА */
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* ХЕРО */
+.hero{padding:clamp(40px,5vw,70px) 0 var(--space)}
+.eyebrow{
+  display:inline-block;margin-bottom:16px;font-size:13px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;
+}
+.hero h1{max-width:20ch;margin-bottom:.4em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:clamp(16px,1.7vw,19px);color:var(--muted);max-width:54ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+/* СЕКЦИИ */
+section{padding-block:calc(var(--space) * .6)}
+.section-title{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:900px){.cards{grid-template-columns:1fr}}
+.card{
+  background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;display:flex;flex-direction:column;gap:10px;
+}
+.card p{color:var(--muted);font-size:15px;margin-bottom:0}
+
+/* ВИДЕОПЛЕЕРЫ */
+.video-container{
+  background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;margin-bottom:24px;box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+.video-container video{width:100%;display:block;max-height:500px;background:#000}
+.video-info{padding:16px 20px;font-size:15px;color:var(--muted);border-top:1px solid var(--line)}
+
+/* КОНТАКТЫ (ОТДЕЛЬНАЯ ВКЛАДКА) */
+.contacts-page{padding:40px 0 80px}
+.contacts-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+@media (max-width:850px){.contacts-grid{grid-template-columns:1fr}}
+.bot-card{
+  background:linear-gradient(135deg, rgba(254,17,124,0.15), var(--ink-2));
+  border:2px solid var(--accent);border-radius:20px;padding:36px;text-align:center;
+}
+.bot-card h2{color:#fff;margin-bottom:12px}
+.bot-card p{color:var(--muted);margin-bottom:24px;margin-inline:auto}
+.bot-link-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--accent);color:#000;padding:16px 32px;border-radius:100px;
+  font-weight:800;font-size:18px;text-decoration:none;box-shadow:0 0 25px rgba(254,17,124,0.4);
+  transition:.2s;
+}
+.bot-link-btn:hover{transform:scale(1.03);background:#ff2c8d}
+.contacts-info-card{
+  background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:36px;
+}
+.contacts-info-card h3{margin-top:0;color:#fff}
+.c-item{display:flex;flex-direction:column;margin-bottom:18px}
+.c-label{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.c-val{font-size:17px;font-weight:600;color:#fff;margin-top:3px}
+
+/* ФУТЕР */
+.site-footer{border-top:1px solid var(--line);margin-top:60px;padding:40px 0;font-size:14px;color:var(--muted)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
+@media (max-width:768px){.footer-grid{grid-template-columns:1fr}}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo-box" href="#top" onclick="switchTab('home', event)">
+      <div class="logo-icon">Д</div>
+      <div class="logo-texts">
+        <span class="logo-title">ДРАМА</span>
+        <span class="logo-sub">Кавер-группа</span>
+      </div>
+    </a>
+    
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="#home" onclick="switchTab('home', event)" id="nav-home" class="active">Главная</a></li>
+        <li><a href="#contacts" onclick="switchTab('contacts', event)" id="nav-contacts">Контакты и бот</a></li>
+      </ul>
+    </nav>
+    
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+79388783352">+7 (938) 878-33-52</a>
+      <button class="btn btn-primary btn-sm" type="button" onclick="switchTab('contacts', event)">Связаться</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ВКЛАДКА 1: ГЛАВНАЯ -->
+  <div id="tab-home" class="tab-content active">
+    
+    <!-- HERO СЕКЦИЯ -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Краснодар · Сочи · Анапа · Геленджик · Новороссийск · Ростов</span>
+            <h1>Кавер-группа <em>ДРАМА</em> — живая музыка на свадьбу и корпоратив</h1>
+            <p class="hero-sub">Два вокалиста, живой состав и любимые песни — от лаунжа на встрече гостей до мощного танцпола.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" onclick="switchTab('contacts', event)">Связаться с Татьяной Мон</button>
+              <a class="btn btn-ghost" href="#videos">Смотреть видео</a>
+            </div>
+          </div>
+          <div>
+            <div class="video-container" style="margin-bottom:0">
+              <video controls playsinline preload="metadata" src="1.mp4">
+                Ваш браузер не поддерживает видео. Проверьте наличие файла 1.mp4
+              </video>
+              <div class="video-info">Live Promo — Кавер-группа ДРАМА</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ ВИДЕО (1.mp4, 2.mp4, 3.mp4) -->
+    <section id="videos" style="background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+      <div class="wrap">
+        <p class="section-title">Видео выступления</p>
+        <h2>Как мы звучим и зажигаем публику</h2>
+        <p style="color:var(--muted);margin-bottom:30px">Включите ролики, чтобы оценить качество звука и энергетику живого выступления.</p>
+        
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:24px">
+          <div class="video-container">
+            <video controls playsinline preload="metadata" src="1.mp4">Ваш браузер не поддерживает видео 1.mp4</video>
+            <div class="video-info">Ролик №1 (1.mp4)</div>
+          </div>
+          <div class="video-container">
+            <video controls playsinline preload="metadata" src="2.mp4">Ваш браузер не поддерживает видео 2.mp4</video>
+            <div class="video-info">Ролик №2 (2.mp4)</div>
+          </div>
+          <div class="video-container">
+            <video controls playsinline preload="metadata" src="3.mp4">Ваш браузер не поддерживает видео 3.mp4</video>
+            <div class="video-info">Ролик №3 (3.mp4)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФОРМАТЫ -->
+    <section>
+      <div class="wrap">
+        <p class="section-title">Форматы</p>
+        <h2>Три формата под ваше событие</h2>
+        <div class="cards" style="margin-top:22px">
+          <article class="card">
+            <h3>Свадьба</h3>
+            <p>Лаунж на встрече гостей, первый танец, энергичные танцевальные блоки под тайминг вашого дня.</p>
+          </article>
+          <article class="card">
+            <h3>Корпоратив</h3>
+            <p>Юбилеи компаний и новогодние вечера. Полный пакет документов, профессиональный звук и свет.</p>
+          </article>
+          <article class="card">
+            <h3>Лаунж-дуэт</h3>
+            <p>Два вокалиста без полного состава: идеальное атмосферное сопровождение для уютного вечера или welcome-зоны.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ВКЛАДКА 2: КОНТАКТЫ И БОТ -->
+  <div id="tab-contacts" class="tab-content">
+    <div class="wrap contacts-page">
+      <p class="section-title">Связь</p>
+      <h2>Контакты и официальный бот</h2>
+      <p style="color:var(--muted);margin-bottom:30px">Выберите удобный способ связи с руководителем коллектива Татьяной Мон.</p>
+      
+      <div class="contacts-grid">
+        <div class="bot-card">
+          <h2>Telegram-бот</h2>
+          <p>Мгновенная связь с Татьяной Мон, проверка доступности дат, бронирование и подробная консультация.</p>
+          <a class="bot-link-btn" href="https://t.me/drama_cover_bot" target="_blank" rel="noopener">
+            Открыть @drama_cover_bot
+          </a>
+        </div>
+        
+        <div class="contacts-info-card">
+          <h3>Прямые контакты</h3>
+          <div class="c-item">
+            <span class="c-label">Телефон для связи</span>
+            <a class="c-val" href="tel:+79388783352" style="color:var(--accent)">+7 (938) 878-33-52</a>
+          </div>
+          <div class="c-item">
+            <span class="c-label">География выступлений</span>
+            <span class="c-val">Краснодар, Сочи, Анапа, Геленджик, Новороссийск, Ростов</span>
+          </div>
+          <div class="c-item" style="margin-bottom:0">
+            <span class="c-label">Режим работы</span>
+            <span class="c-val">Ежедневно, 10:00 – 21:00 МСК</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+          <div class="logo-icon" style="width:30px;height:30px;font-size:16px">Д</div>
+          <span style="font-weight:900;font-size:16px;color:#fff">ДРАМА</span>
+        </div>
+        <p style="max-width:32ch">Кавер-группа. Живая музыка на свадьбы, корпоративы и частные мероприятия.</p>
+      </div>
+      <div>
+        <p style="margin:0 0 8px;font-weight:600;color:#fff">Связь с Татьяной Мон:</p>
+        <p style="margin:0 0 6px"><a href="https://t.me/drama_cover_bot" target="_blank" style="color:var(--accent);font-weight:700">@drama_cover_bot</a></p>
+        <p style="margin:0"><a href="tel:+79388783352">+7 (938) 878-33-52</a></p>
+      </div>
+      <div>
+        <p style="margin:0 0 8px;font-weight:600;color:#fff">Города выступлений:</p>
+        <p style="margin:0;font-size:13.5px">Краснодар, Сочи, Анапа, Геленджик, Новороссийск, Ростов</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Кавер-группа ДРАМА</span>
+      <span>Все права защищены</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function switchTab(tabId, event) {
+  if (event) event.preventDefault();
+  
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.main-nav a').forEach(el => el.classList.remove('active'));
+  
+  document.getElementById('tab-' + tabId).classList.add('active');
+  const navLink = document.getElementById('nav-' + tabId);
+  if (navLink) navLink.classList.add('active');
+  
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
